@@ -1,0 +1,432 @@
+/* Page One */
+#pageOne {
+    background-image: url("Images/macbookPhoto.jpg");
+    min-height: 100%;
+    min-width: 100%;
+    min-width: 400px;
+    min-height: 400px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#navbar {
+    position: absolute;
+    /* overflow: hidden; */
+    z-index: 51;
+    height: 50px;
+    min-width: 100%;
+    transition: background-color 0.5s linear;
+    -moz-transition: background-color 0.5s linear;  
+    -webkit-transition: background-color 0.5s linear; 
+    -ms-transition: background-color 0.5s linear; 
+    
+} 
+#navbar a {
+    float: right;
+    display: block;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    font-size: 18px;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+.content {
+    padding: 16px;
+}
+.sticky {
+    overflow: hidden;
+    /* position: fixed;  */
+    top: 0;
+    background-color: black;
+    opacity: 0.8;
+    min-width: 100%;
+}
+
+.sticky + .content {
+    padding-top: 60px;
+
+} 
+#containerForTextFields {
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    /* text-align: center; */
+} 
+
+#welcome_message {
+    position: absolute;
+    color: white;
+    z-index: 50;
+    left: 38%;
+    top: 46%;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+}
+
+#arrow_button {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    padding: 10px;
+    left: 48%;
+    bottom: 60px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    z-index: 50;
+}
+
+/* Page Two */ 
+
+#pageTwo {
+    position: relative;
+    /* background-color: whitesmoke; */
+    min-height: 100%;
+    z-index: -1;
+}
+#pageTwoAnchor {
+    position: relative;
+    top: 30px;
+}
+.half {
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+#leftPageTwo {
+    left: 0;
+    background-color: whitesmoke;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+}
+#leftPageTwoContainer {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+#leftPageTwoImage {
+    position: relative;
+    background-image: url("Images/fillerImage.jpg");
+    min-height: 40%;
+    min-width: 70%;
+    /* min-width: 200px;
+    min-height: 200px; */
+    left: 30%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-bottom: 14%;
+    top: 5%;
+    border-radius: 10px;
+}
+
+#leftPageTwoImageCaption {
+    position: absolute;
+    left: 30%;
+    min-width: 100%;
+    font-weight: 400;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    /* margin-bottom: 10%; */
+}
+
+#pageTwoAboutMeText {
+    color: black;
+    position: absolute;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    min-height: 30%;
+    min-width: 70%;
+    min-width: 400px;
+    /* min-width: 200px;
+    min-height: 200px; */
+    top: 55%;
+    left: 28%;
+}
+/*  Right half of page two */
+#rightPageTwo {
+    right: 0;
+    background-color: whitesmoke;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.infoList {
+    position: relative;
+    margin: 30px;
+}
+
+#infoLists {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-left: 0px;
+}
+
+#infoLists ul {
+    display: block;
+    text-align: left;
+    float: left;
+    padding: 14px;
+    text-decoration: none;
+    list-style-type: upper-roman;
+    margin-top: 20px;
+    width: 20%;
+}
+#listHeader {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+#infoLists ul li {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+
+
+/* End of old page one 
+.infoList {
+    position: relative;
+    margin: 30px;
+}
+
+.infoList:hover {
+    opacity: 1;
+}
+#pageTwoContainer {
+    margin: 40px 40px 40px 40px;
+    background-color: #404040;
+    color: #e8e8e8;
+    min-width: 80%;
+    min-height: 80%;
+}
+
+#infoLists {
+    display: flex;
+    flex: auto;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding-left: 0px;
+}
+
+#infoLists ul {
+    display: block;
+    text-align: left;
+    float: left;
+    padding: 14px;
+    text-decoration: none;
+    list-style-type: upper-roman;
+    margin-top: 20px;
+    width: 20%;
+}
+#listHeader {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 400;
+    list-style-type: none;
+    font-size: 16px;
+}
+
+#infoLists ul li {
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px;
+}
+#htmlListElement:before {
+    position: absolute;
+    content: ''; 
+    display: inline-block; 
+    width: 20px; 
+    height: 20px;
+}
+
+#aboutMeText {
+    align-self: center;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 40%;
+    height: 30%;
+    margin: auto;
+}  
+End of old page two */
+/* Page Three */
+
+#pageThree {
+    background-color: orange;
+    min-height: 100%;
+    text-align: center;
+}
+#projectDisplay {
+    position: relative;
+}
+.slide {
+    position: absolute;
+    background-color: whitesmoke;
+    border-style: solid;
+    border-width: 125px;
+    border-color: whitesmoke;
+    border-radius: 20px;
+    width: 60vw;
+    height: 60vh;
+    margin: auto;
+    left: 10%;
+    top: 10vh;
+    text-align: center;
+}
+
+#slideOne {
+    background-image: url("Images/ProjectPhoto.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.projectTitle {
+    position: absolute;
+    background-color: whitesmoke;
+    font-size: 20px;
+    top: 10vw;
+    left: 38%;
+    z-index: 1;
+}
+.projectText {
+    position: absolute;
+    background-color: whitesmoke;
+    font-size: 20px;
+    top: 90vh;
+    left: 38%;
+}
+.previous, .next {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 25px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  .next {
+    border-radius: 3px 0 0 3px;
+    left: 20%;
+    top: 76vh;
+  }
+  .previous {
+    right: 21%;
+    top: 76vh;
+  }
+  
+  .previous:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+    color: white;
+  }
+  
+
+/*  Page Four */ 
+
+#pageFour {
+    margin-top: 100px;
+    background-color: gray;
+}
+
+/* Test Form */
+
+input[type=text], textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px; 
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+
+
+/* Test Form End */
+
+
+/* Dividers */
+#pageOneTwoDivider {
+    min-width: 100%;
+    min-height: 30%;
+    height: 150px;
+    font-family: 'Courier New', Courier, monospace;
+    margin-left: 20%;
+}
+#pageOneTwoDividerText {
+    font-size: 25px;
+    font-weight: 400;
+}
+#pageOneTwoDividerParagraph {
+    font-size: 20px;
+    width: 70%;
+}
+#grayDivider {
+    position: relative;
+    background-color: #373733;
+    min-height: 10%;
+    min-width: 100%;
+}
+
+/* All of the website */
+.anchor {
+    position: relative;
+    top: 100px;
+}
+html {
+    scroll-behavior: smooth;
+}
+html, body {
+    height: 100%;
+    background-color: whitesmoke;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    /* margin: 0; */
+}
+.page {
+    height: 100%;
+}
+
