@@ -22,7 +22,7 @@
     -ms-transition: background-color 0.5s linear; 
     
 } 
-#navbar a {
+#navbar .navbarElement {
     float: right;
     display: block;
     text-align: center;
@@ -31,18 +31,22 @@
     font-size: 18px;
     margin: auto;
     font-family: 'Courier New', Courier, monospace;
-    color: white;
+    color: black;
+    transition: color 0.5s linear;
+    -moz-transition: color 0.5s linear;  
+    -webkit-transition: color 0.5s linear; 
+    -ms-transition: color 0.5s linear; 
 }
 .content {
     padding: 16px;
 }
 .sticky {
     overflow: hidden;
-    /* position: fixed;  */
     top: 0;
     background-color: black;
     opacity: 0.8;
     min-width: 100%;
+    color: white;
 }
 
 .sticky + .content {
@@ -84,9 +88,9 @@
 
 #pageTwo {
     position: relative;
-    /* background-color: whitesmoke; */
     min-height: 100%;
     z-index: -1;
+    color: black;
 }
 #pageTwoAnchor {
     position: relative;
@@ -94,7 +98,6 @@
 }
 .half {
     height: 100%;
-    width: 50%;
     position: absolute;
     z-index: 1;
     top: 0;
@@ -103,11 +106,12 @@
 }
 
 #leftPageTwo {
-    left: 0;
-    background-color: whitesmoke;
+    left: 500px;
+    background-color: white;
     overflow-y: hidden;
     overflow-x: hidden;
-
+    margin-right: 1000px;
+    width: 25%;
 }
 #leftPageTwoContainer {
     position: absolute;
@@ -118,28 +122,29 @@
 #leftPageTwoImage {
     position: relative;
     background-image: url("Images/fillerImage.jpg");
-    min-height: 40%;
-    min-width: 70%;
-    /* min-width: 200px;
-    min-height: 200px; */
+    height: 300px;
+    width: 300px;
     left: 30%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     margin-bottom: 14%;
-    top: 5%;
+    top: 60px;
     border-radius: 10px;
+    
 }
 
 #leftPageTwoImageCaption {
     position: absolute;
-    left: 30%;
-    min-width: 100%;
+    /* left: 30%; */
+    min-width: 200px;
     font-weight: 400;
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     color: black;
+    top: 350px;
+    left: 40px;
     /* margin-bottom: 10%; */
 }
 
@@ -147,210 +152,155 @@
     color: black;
     position: absolute;
     font-size: 20px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     min-height: 30%;
     min-width: 70%;
     min-width: 400px;
-    /* min-width: 200px;
-    min-height: 200px; */
     top: 55%;
     left: 28%;
 }
 /*  Right half of page two */
 #rightPageTwo {
-    right: 0;
-    background-color: whitesmoke;
+    position: absolute;
+    right: 200px;
+    background-color: white;
     overflow-y: hidden;
     overflow-x: hidden;
-}
-
-.infoList {
-    position: relative;
-    margin: 30px;
-}
-
-#infoLists {
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding-left: 0px;
-}
-
-#infoLists ul {
-    display: block;
-    text-align: left;
-    float: left;
-    padding: 14px;
-    text-decoration: none;
-    list-style-type: upper-roman;
-    margin-top: 20px;
-    width: 20%;
-}
-#listHeader {
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
-    list-style-type: none;
-    font-size: 16px;
-}
-
-#infoLists ul li {
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
-}
-
-
-/* End of old page one 
-.infoList {
-    position: relative;
-    margin: 30px;
-}
-
-.infoList:hover {
-    opacity: 1;
-}
-#pageTwoContainer {
-    margin: 40px 40px 40px 40px;
-    background-color: #404040;
-    color: #e8e8e8;
-    min-width: 80%;
-    min-height: 80%;
-}
-
-#infoLists {
-    display: flex;
-    flex: auto;
-    position: relative;
-    overflow: hidden;
-    text-align: center;
-    padding-left: 0px;
-}
-
-#infoLists ul {
-    display: block;
-    text-align: left;
-    float: left;
-    padding: 14px;
-    text-decoration: none;
-    list-style-type: upper-roman;
-    margin-top: 20px;
-    width: 20%;
-}
-#listHeader {
-    margin: 0;
-    padding: 0;
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
-    list-style-type: none;
-    font-size: 16px;
-}
-
-#infoLists ul li {
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 10px;
-}
-#htmlListElement:before {
-    position: absolute;
-    content: ''; 
-    display: inline-block; 
-    width: 20px; 
-    height: 20px;
-}
-
-#aboutMeText {
-    align-self: center;
-    text-align: center;
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
+    min-width: 20%;
+    color: black;
+    top: 40px;
     width: 40%;
-    height: 30%;
-    margin: auto;
-}  
-End of old page two */
+}
+
+.infoList {
+    position: relative;
+    /* margin: 30px; */
+}
+
+#infoLists {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+#infoLists ul {
+    text-align: left;
+    padding: 14px;
+    text-decoration: none;
+    list-style-type: none;
+    margin-top: 20px;
+    background-color: #FFC308;
+    border-radius: 10px;
+    width: 600px;
+    height: 150px;
+
+}
+#listHeader {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    list-style-type: none;
+    font-size: 20px;
+}
+
+#infoLists ul li {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* padding: 10px; */
+}
 /* Page Three */
 
 #pageThree {
-    background-color: orange;
+    position: relative;
+    max-width: 50%;
     min-height: 100%;
     text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 #projectDisplay {
     position: relative;
+    min-height: 100%; 
+    min-width: 80%;
+    top: -2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    list-style-type: none;
+    padding: 0;
+    background-color: #525252;
+    /* border-radius: 20px; */
 }
-.slide {
-    position: absolute;
-    background-color: whitesmoke;
-    border-style: solid;
-    border-width: 125px;
-    border-color: whitesmoke;
+#project {
+    position: relative;
+    min-height: 300px;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    top: 40px;
+    color: black;
+    background-color: #FFC308;
     border-radius: 20px;
-    width: 60vw;
-    height: 60vh;
-    margin: auto;
-    left: 10%;
-    top: 10vh;
-    text-align: center;
 }
 
-#slideOne {
+.projectImage {
+    /* left: 300px; */
+    left: 40px;
+    position: relative;
+    background-color: white;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    top: 30px;
+    display: block;
+}
+
+#projectName {
+    position: absolute;
+    left: 50px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* min-width: 180px; */
+    max-width: 200px;
+    text-align: left;
+    bottom: 20px;
+
+}
+
+#projectDescription {
+    position: absolute;
+    top: 30px;
+    text-align: left;
+    left: 300px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#projectOne {
     background-image: url("Images/ProjectPhoto.png");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
-
-.projectTitle {
-    position: absolute;
-    background-color: whitesmoke;
-    font-size: 20px;
-    top: 10vw;
-    left: 38%;
-    z-index: 1;
+#projectTwo {
+    background-image: url("Images/ACPCPhoto.png");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-.projectText {
-    position: absolute;
-    background-color: whitesmoke;
-    font-size: 20px;
-    top: 90vh;
-    left: 38%;
+#projectThree {
+    background-image: url("Images/CCCPhoto3.png");
+    -webkit-background-size: cover; 
+     -moz-background-size: cover; 
+     -o-background-size: cover; 
+     background-size: cover; 
 }
-.previous, .next {
-    cursor: pointer;
-    position: absolute;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: black;
-    font-weight: bold;
-    font-size: 25px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-  }
-  
-  .next {
-    border-radius: 3px 0 0 3px;
-    left: 20%;
-    top: 76vh;
-  }
-  .previous {
-    right: 21%;
-    top: 76vh;
-  }
-  
-  .previous:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
-    color: white;
-  }
-  
-
 /*  Page Four */ 
 
 #pageFour {
+    position: relative;
     margin-top: 100px;
     background-color: gray;
 }
@@ -390,23 +340,28 @@ input[type=text], textarea {
 
 /* Dividers */
 #pageOneTwoDivider {
-    min-width: 100%;
-    min-height: 30%;
+    position: relative;
+    background-color: #525252;
+    width: 90%;
+    min-height: 20%;
     height: 150px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     margin-left: 20%;
+    top: 30px;
 }
 #pageOneTwoDividerText {
     font-size: 25px;
     font-weight: 400;
+    color: white;
 }
 #pageOneTwoDividerParagraph {
     font-size: 20px;
     width: 70%;
+    color: white;
 }
 #grayDivider {
     position: relative;
-    background-color: #373733;
+    background-color: #525252;
     min-height: 10%;
     min-width: 100%;
 }
@@ -421,7 +376,7 @@ html {
 }
 html, body {
     height: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     margin: 0 0 0 0;
     padding: 0 0 0 0;
     /* margin: 0; */
@@ -429,4 +384,3 @@ html, body {
 .page {
     height: 100%;
 }
-
