@@ -4,8 +4,11 @@ better looking. My next goal is going to be to make the front page look more pro
 with the nav bar. 
 Goal #2: I am quite happy with the front page so now I can start working on the second page as well as 
 the divider. I have establied that the websites is going to be primarily white, black and orange. 
-
-
+Goal #3: Currently my website has a layout and some information. The overall design is not done but I have
+finished the general design. Now I want to make my website responsive. As of now my website layout 
+only looks as it should at a certain screen size. In order to do this I am going to use CSS media
+queries. These are queries that react to screen width and height. My goal is to use media queries to 
+firstly make my first page responsive and then make the whole website responsive. 
 -->
 
 <!DOCTYPE html>
@@ -14,9 +17,9 @@ the divider. I have establied that the websites is going to be primarily white, 
     <title>Page Title</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="myStyleSheet.css">
+    <link rel="stylesheet" type="text/css" href="CSS/styleSheet.css">
 </head>
-<body>
+<body id="webpageBody">
     <!--PAGE ONE-->
     <div id="pageOne" class="page">
         <div id="navbar">
@@ -140,10 +143,13 @@ the divider. I have establied that the websites is going to be primarily white, 
             <li id="project">
                     <a href="https://github.com/DevinLeamy/CCC-Solutions" class="projectImage" id="projectThree"></a>
                 <div id="projectName">
-                    Canadian Computing Competition 
+                    Canadian Computing Competition
                 </div>
                   <div id="projectDescription">
-                    This project was created using X and serves to do Y
+                    The Canadian Computing Competition is a high school computing competition hosted by The
+                    University of Waterloo. Every year Canadian coders compete for a place at the stage 2 
+                    contest hosted at The University of Waterloo. I like many of these students have gone 
+                    through the previous years of the contest in order to prepare and here are my solutions! 
                 </div>
             </li>
 
@@ -197,6 +203,10 @@ the divider. I have establied that the websites is going to be primarily white, 
     var inputEmailAddress = document.getElementById("emailAddress");
     var messageTextArea = document.getElementById("subject");
     var sticky = navbar.offsetTop;
+    var body = document.getElementById("webpageBody");
+    var welcome_message = document.getElementById("welcome_message");
+    var arrow_button = document.getElementById("arrow_button");
+    body.onresize = updatePositions;
     function stickyNav() {
         if (window.pageYOffset > sticky) {
             navbar.classList.add("sticky")
@@ -212,11 +222,6 @@ the divider. I have establied that the websites is going to be primarily white, 
             }
         }
     }
-    // function sendEmail() {
-
-
-    // }
-
     function isValid() {
         var name = inputName.value;
         var emailAddress = inputEmailAddress.value;
@@ -234,9 +239,11 @@ the divider. I have establied that the websites is going to be primarily white, 
         alert("You have entered an invalid email address!")
         return (false)
     }
-</script>
+    function updatePositions() {
+        var screenWidth = screen.width;
+        var offset = (welcome_message.value.length / 2) * welcome_message.style.fontSize;
+        // welcome_message.style.left = -1 * ((screenWidth / 2) - offset);
+    }
 
 
-
-
-<!--Sub project, onClick send an email from useremail@gmail.com to devinleamy@gmail.com-->
+</script
